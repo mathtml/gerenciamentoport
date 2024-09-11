@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+Português:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Inicialmente o projeto é simples, é apenas uma página para gerenciamento de funcionários e criação de relatórios via excel.
 
-## Available Scripts
+Eu utilizo MARIADB para armazenamento dos dados.
 
-In the project directory, you can run:
 
-### `npm start`
+Os comandos são básicos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+create database portfolio;
+verifique se foi criado o banco
+show databases;
+crie o usuario e senha
+CREATE USER 'portfolio'@'localhost' IDENTIFIED BY 'portfolio';
+de as permissões
+GRANT ALL PRIVILEGES ON portfolio.* TO 'portfolio'@'localhost';
+FLUSH PRIVILEGES;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+não coloquei gitignore no .env para facilitar o processo de quem for baixar, apenas criar o banco de dados e utilizar o projeto.
 
-### `npm test`
+na sequencia, apenas utilizar npm run build e npm start no backend e npm start no frontend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### `npm run build`
+English:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Initially, the project is simple; it's just a page for managing employees and generating reports via Excel.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I use MARIADB for data storage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The commands are basic:
 
-### `npm run eject`
+Create the database:
+CREATE DATABASE portfolio;
+Verify if the database was created:
+SHOW DATABASES;
+Create the user and password:
+CREATE USER 'portfolio'@'localhost' IDENTIFIED BY 'portfolio';
+Grant permissions:
+GRANT ALL PRIVILEGES ON portfolio.* TO 'portfolio'@'localhost';
+FLUSH PRIVILEGES;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I didn’t include a gitignore for the .env file to simplify the process for those who download the project; they just need to create the database and use the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Then, simply run npm run build and npm start for the backend, and npm start for the frontend.
