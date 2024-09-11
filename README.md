@@ -18,7 +18,7 @@ FLUSH PRIVILEGES;
 
 não coloquei gitignore no .env para facilitar o processo de quem for baixar, apenas criar o banco de dados e utilizar o projeto.
 
-na sequencia, apenas utilizar npm run build e npm start no backend e npm start no frontend.
+na sequencia, apenas utilizar npm run build e npm start no backend, npm i -f e npm start no frontend.
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
