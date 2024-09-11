@@ -1,0 +1,38 @@
+import Employee from "../models/employees.js";
+class EmployeeService {
+    async getAllEmployees() {
+        return Employee.findAll();
+    }
+    async getEmployeeById(id) {
+        return Employee.findByPk(id);
+    }
+    async createEmployee(employeeData) {
+        const { name, cpf, email, dateborn, location, cargo } = employeeData;
+        if (!name || !cpf || !email || !dateborn || !location || !cargo) {
+            throw new Error('All fields are required');
+        }
+        return Employee.create({
+            name,
+            cpf,
+            email,
+            dateborn,
+            location,
+            cargo
+        });
+    }
+    async updateEmployee(id, employeeData) {
+        const employee = await Employee.findByPk(id);
+        if (employee) {
+            return employee.update(employeeData);
+        }
+        throw new Error('Employee not found');
+    }
+    async deleteEmployee(id) {
+        const employee = await Employee.findByPk(id);
+        if (employee) {
+            return employee.destroy();
+        }
+        throw new Error('Employee not found');
+    }
+}
+export default new EmployeeService();
