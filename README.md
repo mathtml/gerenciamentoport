@@ -42,4 +42,4 @@ FLUSH PRIVILEGES;
 
 I didn’t include a gitignore for the .env file to simplify the process for those who download the project; they just need to create the database and use the project.
 
-Then, simply run npm run build and npm start for the backend, and npm start for the frontend.
+Then, simply run npm run build and npm start for the backend, npm i -f and npm start for the frontend.
